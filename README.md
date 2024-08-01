@@ -1,0 +1,2 @@
+# ShopNGo_net
+.net
