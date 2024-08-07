@@ -1,0 +1,208 @@
+﻿/* General styling for product cards */
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    /* Hover effect for product cards */
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Styling for discount label */
+.discount-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Styling for product images */
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    max-height: 150px; /* Set a maximum height */
+}
+
+/* Styling for product names */
+.product-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Styling for product descriptions */
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Container for product prices */
+.product-prices {
+    margin: 10px 0;
+}
+
+/* Styling for original price */
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+/* Styling for sale price */
+.sale-price {
+    font-size: 20px;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* Styling for add to cart button */
+.add-to-cart-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    /* Hover effect for add to cart button */
+    .add-to-cart-button:hover {
+        background-color: #218838;
+    }
+
+/* Layout for categories and deals sections */
+.categories, .deals, .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styling for category and deal cards */
+.category-card, .deal-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    /* Hover effect for category and deal cards */
+    .category-card:hover, .deal-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Styling for category images */
+.category-image, .deal-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    max-height: 150px; /* Set a maximum height */
+}
+
+/* Styling for category and deal names */
+.category-name, .deal-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Styling for deal descriptions */
+.deal-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Container for deal prices */
+.deal-prices {
+    margin: 10px 0;
+}
+
+/* Original price styling for deals */
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+/* Sale price styling for deals */
+.sale-price {
+    font-size: 20px;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* Navigation bar styling */
+.navbar-inverse {
+    background-color: #28a745; /* Green color */
+    border-color: #28a745;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff; /* White text color */
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover,
+        .navbar-inverse .navbar-nav > li > a:focus {
+            color: #d4d4d4; /* Light gray text color on hover */
+            background-color: transparent;
+        }
+
+.navbar-brand {
+    padding: 5px 15px;
+}
+
+    .navbar-brand img {
+        max-height: 40px; /* Adjust the height as needed */
+        max-width: 100px; /* Adjust the width as needed */
+    }
+
+/* General styling for news cards */
+.news-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+/* Styling for news titles */
+.news-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Styling for news content */
+.news-content {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Styling for news date */
+.news-date {
+    font-size: 14px;
+    color: #999;
+}
