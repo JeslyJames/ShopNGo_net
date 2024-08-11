@@ -16,7 +16,7 @@
                         <span class="original-price"><%# Eval("original_price", "{0:C}") %></span>
                         <span class="sale-price"><%# Eval("sale_price", "{0:C}") %></span>
                     </div>
-                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' />
+                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' OnCommand="btnAddToCart_Command" />
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -35,7 +35,7 @@
                         <span class="original-price"><%# Eval("original_price", "{0:C}") %></span>
                         <span class="sale-price"><%# Eval("sale_price", "{0:C}") %></span>
                     </div>
-                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' />
+                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' OnCommand="btnAddToCart_Command" />
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -54,7 +54,7 @@
                         <span class="original-price"><%# Eval("original_price", "{0:C}") %></span>
                         <span class="sale-price"><%# Eval("sale_price", "{0:C}") %></span>
                     </div>
-                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' />
+                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' OnCommand="btnAddToCart_Command" />
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -73,7 +73,7 @@
                         <span class="original-price"><%# Eval("original_price", "{0:C}") %></span>
                         <span class="sale-price"><%# Eval("sale_price", "{0:C}") %></span>
                     </div>
-                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' />
+                    <asp:Button ID="btnAddToCart" runat="server" Text="ADD" CssClass="add-to-cart-button" CommandName="AddToCart" CommandArgument='<%# Eval("product_id") %>' OnCommand="btnAddToCart_Command" />
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -94,5 +94,5 @@
 
     <asp:SqlDataSource ID="SqlDataSourceMeat" runat="server" 
         ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
-        SelectCommand="SELECT product_id, name, description, original_price, sale_price, image_url, stock_quantity, price FROM Products WHERE category_id = 5"></asp:SqlDataSource>
+        SelectCommand="SELECT product_id, name, description, original_price, sale_price, image_url, stock_quantity, price FROM Products WHERE category_id = 4"></asp:SqlDataSource>
 </asp:Content>

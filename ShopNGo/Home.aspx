@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="ShopNGo.Home" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="ShopNGo.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Welcome to ShopNGo</h2>
@@ -10,7 +10,9 @@
         <asp:Repeater ID="RepeaterCategories" runat="server" DataSourceID="SqlDataSourceCategories">
             <ItemTemplate>
                 <div class="category-card product-card">
-                    <img src='<%# ResolveUrl(Eval("image_url").ToString()) %>' alt='<%# Eval("category_name") %>' class="category-image product-image" />
+                    <asp:HyperLink ID="hlCategory" runat="server" NavigateUrl='<%# "~/Products.aspx?category=" + Eval("category_name") %>'>
+                        <img src='<%# ResolveUrl(Eval("image_url").ToString()) %>' alt='<%# Eval("category_name") %>' class="category-image product-image" />
+                    </asp:HyperLink>
                     <h4 class="category-name product-name"><%# Eval("category_name") %></h4>
                 </div>
             </ItemTemplate>
@@ -30,7 +32,9 @@
                     <div class="discount-label">
                         <%# Eval("discount") %> off
                     </div>
-                    <img src='<%# ResolveUrl(Eval("image_url").ToString()) %>' alt='<%# Eval("name") %>' class="deal-image product-image" />
+                    <asp:HyperLink ID="hlDeal" runat="server" NavigateUrl='<%# "~/Products.aspx?product=" + Eval("product_id") %>'>
+                        <img src='<%# ResolveUrl(Eval("image_url").ToString()) %>' alt='<%# Eval("name") %>' class="deal-image product-image" />
+                    </asp:HyperLink>
                     <h4 class="deal-name product-name"><%# Eval("name") %></h4>
                     <p class="deal-description product-description"><%# Eval("description") %></p>
                     <div class="deal-prices product-prices">

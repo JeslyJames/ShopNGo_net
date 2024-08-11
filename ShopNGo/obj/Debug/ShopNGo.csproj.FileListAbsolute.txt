@@ -55,6 +55,7 @@ C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.AspNet.Web.Optimization
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.ScriptManager.MSAjax.dll
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.VisualStudio.DebuggerVisualizers.dll
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Newtonsoft.Json.dll
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\System.Web.Optimization.dll
@@ -64,8 +65,8 @@ C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Newtonsoft.Json.xml
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Antlr3.Runtime.pdb
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Dell\source\repos\ShopNGo\ShopNGo\obj\Debug\ShopNGo.csprojAssemblyReference.cache
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\obj\Debug\ShopNGo.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\obj\Debug\ShopNGo.csproj.CopyComplete
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\obj\Debug\ShopNGo.dll
 C:\Users\Dell\source\repos\ShopNGo\ShopNGo\obj\Debug\ShopNGo.pdb
+C:\Users\Dell\source\repos\ShopNGo\ShopNGo\obj\Debug\ShopNGo.csprojAssemblyReference.cache
