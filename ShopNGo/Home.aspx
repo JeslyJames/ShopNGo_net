@@ -21,7 +21,9 @@
     
     <asp:SqlDataSource ID="SqlDataSourceCategories" runat="server" 
         ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
-        SelectCommand="SELECT category_name, image_url FROM Categories"></asp:SqlDataSource>
+        SelectCommand="SELECT DISTINCT category_name, image_url FROM Categories 
+                       WHERE category_name NOT IN ('Chicken', 'Mutton', 'Fish', 'Steak')">
+    </asp:SqlDataSource>
 
     <!-- Deals Section -->
     <h3>Fresh Deals</h3>
@@ -51,7 +53,8 @@
         ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
         SelectCommand="SELECT product_id, name, description, original_price, sale_price, image_url, 
                        CAST((original_price - sale_price) / original_price * 100 AS INT) AS discount 
-                       FROM Products WHERE sale_price IS NOT NULL"></asp:SqlDataSource>
+                       FROM Products WHERE sale_price IS NOT NULL">
+    </asp:SqlDataSource>
 
     <!-- News Section -->
     <h3>News</h3>
@@ -69,5 +72,6 @@
     
     <asp:SqlDataSource ID="SqlDataSourceNews" runat="server" 
         ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
-        SelectCommand="SELECT title, content, date FROM News ORDER BY date DESC"></asp:SqlDataSource>
+        SelectCommand="SELECT title, content, date FROM News ORDER BY date DESC">
+    </asp:SqlDataSource>
 </asp:Content>

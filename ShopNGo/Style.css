@@ -10,7 +10,6 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-    /* Hover effect for product cards */
     .product-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -33,18 +32,18 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    max-height: 150px; /* Set a maximum height */
+    max-height: 200px; /* Increased height for better visibility */
 }
 
 /* Styling for product names */
 .product-name {
-    font-size: 18px;
+    font-size: 20px; /* Increased font size for better readability */
     margin: 10px 0;
 }
 
 /* Styling for product descriptions */
 .product-description {
-    font-size: 14px;
+    font-size: 15px; /* Increased font size for better readability */
     color: #666;
     margin-bottom: 10px;
 }
@@ -63,7 +62,7 @@
 
 /* Styling for sale price */
 .sale-price {
-    font-size: 20px;
+    font-size: 22px; /* Increased font size for emphasis */
     color: #ff9800;
     font-weight: bold;
 }
@@ -73,13 +72,12 @@
     background-color: #28a745;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increased padding for better appearance */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-    /* Hover effect for add to cart button */
     .add-to-cart-button:hover {
         background-color: #218838;
     }
@@ -101,11 +99,10 @@
     text-align: center;
     position: relative;
     background-color: #fff;
-    width: 200px;
+    width: 220px; /* Adjusted width for consistency */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-    /* Hover effect for category and deal cards */
     .category-card:hover, .deal-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -116,18 +113,18 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    max-height: 150px; /* Set a maximum height */
+    max-height: 200px; /* Increased height for better visibility */
 }
 
 /* Styling for category and deal names */
 .category-name, .deal-name {
-    font-size: 18px;
+    font-size: 20px; /* Increased font size for better readability */
     margin: 10px 0;
 }
 
 /* Styling for deal descriptions */
 .deal-description {
-    font-size: 14px;
+    font-size: 15px; /* Increased font size for better readability */
     color: #666;
     margin-bottom: 10px;
 }
@@ -137,28 +134,26 @@
     margin: 10px 0;
 }
 
-    /* Original price styling for deals */
     .deal-prices .original-price {
         text-decoration: line-through;
         color: #999;
         margin-right: 10px;
     }
 
-    /* Sale price styling for deals */
     .deal-prices .sale-price {
-        font-size: 20px;
+        font-size: 22px; /* Increased font size for emphasis */
         color: #ff9800;
         font-weight: bold;
     }
 
 /* Navigation bar styling */
 .navbar-inverse {
-    background-color: #28a745; /* Green color */
+    background-color: #28a745;
     border-color: #28a745;
 }
 
     .navbar-inverse .navbar-nav > li > a {
-        color: #fff; /* White text color */
+        color: #fff;
         font-size: 16px;
         font-weight: bold;
         text-transform: uppercase;
@@ -166,7 +161,7 @@
 
         .navbar-inverse .navbar-nav > li > a:hover,
         .navbar-inverse .navbar-nav > li > a:focus {
-            color: #d4d4d4; /* Light gray text color on hover */
+            color: #d4d4d4;
             background-color: transparent;
         }
 
@@ -175,8 +170,8 @@
 }
 
     .navbar-brand img {
-        max-height: 40px; /* Adjust the height as needed */
-        max-width: 100px; /* Adjust the width as needed */
+        max-height: 40px;
+        max-width: 100px;
     }
 
 /* General styling for news cards */
@@ -190,7 +185,7 @@
 
 /* Styling for news titles */
 .news-title {
-    font-size: 20px;
+    font-size: 22px; /* Increased font size for emphasis */
     margin: 10px 0;
 }
 
@@ -253,7 +248,7 @@
 }
 
 .cart-sale-price {
-    font-size: 20px;
+    font-size: 22px; /* Increased font size for emphasis */
     color: #ff9800;
     font-weight: bold;
 }
@@ -276,7 +271,7 @@
 }
 
 .cart-price {
-    font-size: 20px;
+    font-size: 22px; /* Increased font size for emphasis */
     font-weight: bold;
     color: #ff9800;
 }
@@ -321,7 +316,7 @@
     }
 
     .cart-summary .total-price {
-        font-size: 20px;
+        font-size: 22px; /* Increased font size for emphasis */
         font-weight: bold;
         color: #ff9800;
     }
@@ -340,30 +335,10 @@
         background-color: #218838;
     }
 
-
-
-
-
-
-
-
-
-
-.cart-card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
+/* Additional Styles for Button Group */
 .btn-change-quantity {
     width: 30px;
     height: 30px;
-}
-
-.quantity-input {
-    width: 50px;
-    text-align: center;
 }
 
 .btn-remove {
@@ -384,128 +359,42 @@
         background-color: #0056b3;
     }
 
-
-
-
-
-/* Ensure the form container has some margin and padding */
-.form-container {
-    max-width: 800px; /* Adjust width as needed */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
-}
-
-/* Style each form-group to handle spacing and alignment */
-.form-group {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 15px; /* Space between form groups */
-}
-
-/* Align labels with form fields */
-.control-label {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    margin-bottom: 5px;
-    padding-right: 15px; /* Space between label and input field */
-}
-
-/* Adjust the width of label and input fields */
-.col-sm-3 {
-    flex: 0 0 25%; /* Label takes up 25% of the container */
-    max-width: 25%;
-}
-
-.col-sm-5 {
-    flex: 0 0 50%; /* Input field takes up 50% of the container */
-    max-width: 50%;
-}
-
-.col-sm-4 {
-    flex: 0 0 25%; /* Validation messages take up 25% of the container */
-    max-width: 25%;
-}
-
-/* Style form-control to ensure consistency */
-.form-control {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-/* Style for validation error messages */
-.text-danger {
-    color: red;
-}
-
-/* Style buttons */
-.btn-primary {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-}
-
-
-
-
-
 /* General Form Container */
 .form-container {
     margin: 20px auto;
     max-width: 800px;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Group Styling */
-.form-group {
-    margin-bottom: 20px;
-}
-
-    .form-group.row {
-        display: flex;
-        align-items: center;
+    .form-container label {
+        font-size: 16px;
+        margin-bottom: 5px;
+        display: block;
     }
 
-.col-form-label {
-    text-align: right;
-    font-weight: bold;
-}
-
-/* Form Control Styling */
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-}
-
-.text-danger {
-    color: #dc3545;
-}
-
-/* Buttons */
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-    .btn-primary:hover {
-        background-color: #0056b3;
-        border-color: #004085;
+    .form-container input, .form-container select, .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
     }
 
-/* Validation Summary */
-.summary {
-    margin-bottom: 20px;
-}
+    .form-container button {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+        .form-container button:hover {
+            background-color: #218838;
+        }

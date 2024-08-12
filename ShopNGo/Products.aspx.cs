@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
+using ShopNGo.Models; // Ensure you are using the correct namespace for CartItem
 
 namespace ShopNGo
 {
@@ -62,8 +63,9 @@ namespace ShopNGo
                 }
                 else
                 {
-                    // Update quantity if item already exists in the cart
+                    // Update quantity and ensure the price is correct
                     existingItem.Quantity++;
+                    existingItem.Price = productPrice; // Ensure the price is updated
                 }
 
                 // Save updated cart to session
@@ -73,14 +75,5 @@ namespace ShopNGo
                 Response.Redirect("Cart.aspx");
             }
         }
-    }
-
-    public class CartItem
-    {
-        public int ProductId { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int Quantity { get; set; }
-        public object Product { get; internal set; }
     }
 }

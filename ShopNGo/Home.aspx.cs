@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -22,8 +19,17 @@ namespace ShopNGo
             if (e.CommandName == "AddToCart")
             {
                 string productId = e.CommandArgument.ToString();
+
                 // Add the selected product to the cart
-                // Implement your cart logic here
+                // For example, you can use a session or other storage method
+                // Example:
+                // List<string> cart = Session["Cart"] as List<string>;
+                // if (cart == null) cart = new List<string>();
+                // cart.Add(productId);
+                // Session["Cart"] = cart;
+
+                // Redirect to the cart page
+                Response.Redirect("~/Cart.aspx");
             }
         }
     }

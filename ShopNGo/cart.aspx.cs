@@ -1,85 +1,82 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web.UI;
+using System.Linq;
 using System.Web.UI.WebControls;
-using ShopNGo.Models; // Ensure this namespace is correct
 
 namespace ShopNGo
 {
-    public partial class Cart : Page
+    public partial class Cart : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        private List<CartItem> CartItems
         {
-            if (!IsPostBack)
+            get
             {
                 if (Session["Cart"] == null)
                 {
                     Session["Cart"] = new List<CartItem>();
                 }
-                DisplayCart();
+                return (List<CartItem>)Session["Cart"];
             }
         }
 
-        private void DisplayCart()
+        protected void Page_Load(object sender, EventArgs e)
         {
-            List<CartItem> cart = (List<CartItem>)Session["Cart"];
-            var cartItems = new List<CartItemDisplayModel>();
-
-            foreach (var item in cart)
+            if (!IsPostBack)
             {
-                cartItems.Add(new CartItemDisplayModel
-                {
-                    ProductId = item.Product.Id,
-                    ProductName = item.Product.Name,
-                    Quantity = item.Quantity,
-                    TotalPrice = item.TotalPrice
-                });
+                BindCart();
+                UpdateTotalPrice();
             }
+        }
 
-            RepeaterCart.DataSource = cartItems;
+        private void BindCart()
+        {
+            RepeaterCart.DataSource = CartItems;
             RepeaterCart.DataBind();
+        }
+
+        private void UpdateTotalPrice()
+        {
+            decimal totalPrice = CartItems.Sum(item => item.TotalPrice);
+            lblTotalPrice.Text = $"Total Price: {totalPrice:C}";
         }
 
         protected void RepeaterCart_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            List<CartItem> cart = (List<CartItem>)Session["Cart"];
-            int productId = Convert.ToInt32(e.CommandArgument);
-            CartItem item = cart.Find(i => i.Product.Id == productId);
-
-            if (item != null)
+            if (e.CommandName == "UpdateQuantity")
             {
-                if (e.CommandName == "UpdateQuantity")
+                int productId = Convert.ToInt32(e.CommandArgument);
+                TextBox txtQuantity = (TextBox)e.Item.FindControl("txtQuantity");
+                if (int.TryParse(txtQuantity.Text, out int quantity) && quantity > 0)
                 {
-                    TextBox txtQuantity = (TextBox)e.Item.FindControl("txtQuantity");
-                    int newQuantity = Convert.ToInt32(txtQuantity.Text);
-
-                    if (newQuantity > 0)
+                    var item = CartItems.FirstOrDefault(i => i.ProductId == productId);
+                    if (item != null)
                     {
-                        item.Quantity = newQuantity;
-                        Session["Cart"] = cart;
-                        DisplayCart();
-                        lblMessage.Text = "Cart updated.";
-                    }
-                    else
-                    {
-                        lblMessage.Text = "Quantity must be greater than zero.";
+                        item.Quantity = quantity;
+                        Session["Cart"] = CartItems;
+                        UpdateTotalPrice();
                     }
                 }
-                else if (e.CommandName == "RemoveFromCart")
+                BindCart();
+            }
+            else if (e.CommandName == "RemoveFromCart")
+            {
+                int productId = Convert.ToInt32(e.CommandArgument);
+                var item = CartItems.FirstOrDefault(i => i.ProductId == productId);
+                if (item != null)
                 {
-                    cart.Remove(item);
-                    Session["Cart"] = cart;
-                    DisplayCart();
-                    lblMessage.Text = "Item removed from cart.";
+                    CartItems.Remove(item);
+                    Session["Cart"] = CartItems;
+                    UpdateTotalPrice();
                 }
+                BindCart();
             }
         }
 
         protected void btnEmpty_Click(object sender, EventArgs e)
         {
             Session["Cart"] = new List<CartItem>();
-            DisplayCart();
-            lblMessage.Text = "Cart has been emptied.";
+            BindCart();
+            UpdateTotalPrice();
         }
     }
 }
