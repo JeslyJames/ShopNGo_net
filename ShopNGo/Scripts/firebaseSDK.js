@@ -26,7 +26,7 @@ googleLogin.addEventListener("click", function () {
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             setCookie('token', credential.accessToken, 7); // Cookie expires in 7 days
-            window.location.href = "/";
+            window.location.href = "/Home";
         }).catch((error) => {
             console.log(error);
         });

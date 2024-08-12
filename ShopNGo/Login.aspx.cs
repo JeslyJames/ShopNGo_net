@@ -31,7 +31,7 @@ namespace ShopNGo
                 // Add the cookie to the response
                 Response.Cookies.Add(myCookie);
 
-                Response.Redirect("/", false);
+                Response.Redirect("/Home", false);
             }
             catch (Exception ex)
             {
