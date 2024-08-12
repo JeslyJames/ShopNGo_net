@@ -11,7 +11,7 @@ namespace ShopNGo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            AuthenticateRequest.VerifyToken();
         }
 
         protected void btnGoHome_Click(object sender, EventArgs e)

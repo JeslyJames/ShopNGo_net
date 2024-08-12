@@ -22,7 +22,14 @@ namespace ShopNGo
                 var firebaseAuthProvider = new FirebaseAuthProvider(new FirebaseConfig(API_KEY));
                 var firebaseAuthLink = firebaseAuthProvider.SignInWithEmailAndPasswordAsync(email, password).Result;
 
-                Session["token"] = firebaseAuthLink.FirebaseToken;
+                //Session["token"] = firebaseAuthLink.FirebaseToken;
+                
+                HttpCookie myCookie = new HttpCookie("token");
+                myCookie.Value = "cookieValue";
+                myCookie.Expires = DateTime.Now.AddDays(7); // Set expiration to 7 days from now
+
+                // Add the cookie to the response
+                Response.Cookies.Add(myCookie);
 
                 Response.Redirect("/", false);
             }

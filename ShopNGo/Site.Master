@@ -54,6 +54,12 @@
                         <li><a runat="server" href="~/Cart">Cart</a></li>
                         <li><a runat="server" href="~/Checkout">Checkout</a></li>
                         <li><a runat="server" href="~/Admin">Admin</a></li>
+                        <% if (ShowLogin) { %>
+                            <li><a runat="server" href="~/Login">Login</a></li>
+                        <% } %>
+                        <% if (ShowLogout) { %>
+                            <li><a runat="server" href="~/Logout">Logout</a></li>
+                        <% } %>
                     </ul>
                 </div>
             </div>

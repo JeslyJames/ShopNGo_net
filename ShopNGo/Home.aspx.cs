@@ -8,6 +8,7 @@ namespace ShopNGo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            AuthenticateRequest.VerifyToken();
             if (!IsPostBack)
             {
                 // No specific tasks needed on initial page load

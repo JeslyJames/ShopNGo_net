@@ -17,7 +17,15 @@ namespace ShopNGo
                     return;
                 }
 
-                string token = HttpContext.Current.Session["token"] as string;
+                //string token = HttpContext.Current.Session["token"] as string;
+                string token = HttpContext.Current.Request.Cookies["token"]?.Value;
+
+                /*
+                if (token != null)
+                {
+                    Session["token"] = token;
+                }
+                */
                 if (token == null)
                 {
                     HttpContext.Current.Response.Redirect("/Login", false);

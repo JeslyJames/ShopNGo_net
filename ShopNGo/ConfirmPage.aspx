@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Order Confirmation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ConfirmPage.aspx.cs" Inherits="ShopNGo.ConfirmPage" %>
+﻿<%@ Page Async="true" Title="Order Confirmation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ConfirmPage.aspx.cs" Inherits="ShopNGo.ConfirmPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" type="text/css" href="~/Content/ConfirmPage.css" />
     
