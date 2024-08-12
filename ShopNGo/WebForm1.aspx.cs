@@ -9,9 +9,9 @@ namespace ShopNGo
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected async void Page_Load(object sender, EventArgs e)
         {
-
+            AuthenticateRequest.VerifyToken();
         }
     }
 }
