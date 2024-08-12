@@ -10,6 +10,7 @@ namespace ShopNGo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 // Initialize cart if it doesn't exist
