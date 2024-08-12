@@ -414,6 +414,13 @@
             whatever value is specified in the service.
             </summary>
         </member>
+        <member name="P:Google.Apis.Requests.ClientServiceRequest`1.ApiVersion">
+            <summary>
+            The precise API version represented by this request.
+            Subclasses generated from a specific known version should override this property,
+            which will result in an x-api-version header being sent on the HTTP request.
+            </summary>
+        </member>
         <member name="P:Google.Apis.Requests.ClientServiceRequest`1.MethodName">
             <inheritdoc/>
         </member>

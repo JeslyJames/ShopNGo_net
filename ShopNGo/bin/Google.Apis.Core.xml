@@ -1743,6 +1743,7 @@
         <member name="T:Google.Apis.Util.Store.IDataStore">
             <summary>
             Stores and manages data objects, where the key is a string and the value is an object.
+            The store will use <see cref="P:Google.Apis.Json.NewtonsoftJsonSerializer.Instance"/> for serialization.
             <para>
             <c>null</c> keys are not allowed.
             </para>
@@ -1752,7 +1753,7 @@
             <summary>Asynchronously stores the given value for the given key (replacing any existing value).</summary>
             <typeparam name="T">The type to store in the data store.</typeparam>
             <param name="key">The key.</param>
-            <param name="value">The value to store.</param>
+            <param name="value">The value to store. Will be serialized using <see cref="P:Google.Apis.Json.NewtonsoftJsonSerializer.Instance"/>.</param>
         </member>
         <member name="M:Google.Apis.Util.Store.IDataStore.DeleteAsync``1(System.String)">
             <summary>
@@ -1766,7 +1767,7 @@
             <summary>Asynchronously returns the stored value for the given key or <c>null</c> if not found.</summary>
             <typeparam name="T">The type to retrieve from the data store.</typeparam>
             <param name="key">The key to retrieve its value.</param>
-            <returns>The stored object.</returns>
+            <returns>The stored object deserialized using <see cref="P:Google.Apis.Json.NewtonsoftJsonSerializer.Instance"/>.</returns>
         </member>
         <member name="M:Google.Apis.Util.Store.IDataStore.ClearAsync">
             <summary>Asynchronously clears all values in the data store.</summary>

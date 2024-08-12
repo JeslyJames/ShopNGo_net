@@ -24,10 +24,10 @@ namespace ShopNGo
                 }
                 else
                 {
-                   string UId = await FirebaseAuthHelper.VerifyTokenAsync(token);
+                    string UId = await FirebaseAuthHelper.VerifyTokenAsync(token);
 
-                   if (UId == null)
-                   {
+                    if (UId == null)
+                    {
                         HttpContext.Current.Response.Redirect("/Login", false);
                     }
                 }
