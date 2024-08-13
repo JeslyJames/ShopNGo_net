@@ -252,6 +252,7 @@ C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\System.Web.WebPages.Depl
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\System.Web.WebPages.dll
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\System.Web.WebPages.Razor.dll
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\WebGrease.dll
+C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\FirebaseAdmin.xml
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\Google.Apis.pdb
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\Google.Apis.xml
@@ -286,8 +287,13 @@ C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\System.Web.Optimization.
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\Antlr3.Runtime.pdb
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\obj\Debug\ShopNGo.csproj.AssemblyReference.cache
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\obj\Debug\ShopNGo.csproj.CoreCompileInputs.cache
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\obj\Debug\ShopNGo.csproj.Up2Date
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\obj\Debug\ShopNGo.dll
 C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\obj\Debug\ShopNGo.pdb
+C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\EntityFramework.dll
+C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\EntityFramework.SqlServer.dll
+C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\EntityFramework.xml
+C:\Users\Nivashini\source\repos\ShopNGo_net\ShopNGo\bin\EntityFramework.SqlServer.xml

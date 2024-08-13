@@ -24,8 +24,7 @@ const googleLogin = document.getElementById("googleLink");
 googleLogin.addEventListener("click", function () {
     signInWithPopup(auth, googleProvider)
         .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            setCookie('token', credential.accessToken, 7); // Cookie expires in 7 days
+            setCookie('token', result.user.accessToken, 7); // Cookie expires in 7 days
             window.location.href = "/Home";
         }).catch((error) => {
             console.log(error);

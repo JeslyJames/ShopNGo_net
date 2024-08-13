@@ -25,7 +25,7 @@ namespace ShopNGo
                 //Session["token"] = firebaseAuthLink.FirebaseToken;
                 
                 HttpCookie myCookie = new HttpCookie("token");
-                myCookie.Value = "cookieValue";
+                myCookie.Value = firebaseAuthLink.FirebaseToken;
                 myCookie.Expires = DateTime.Now.AddDays(7); // Set expiration to 7 days from now
 
                 // Add the cookie to the response

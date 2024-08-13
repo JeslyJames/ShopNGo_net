@@ -11,7 +11,7 @@
 
                 <!-- SqlDataSource for categories -->
                 <asp:SqlDataSource ID="SqlDataSourceCategories" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString2 %>" 
+                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
                     SelectCommand="SELECT [category_id], [category_name] FROM [Categories]">
                 </asp:SqlDataSource>
 
@@ -28,7 +28,7 @@
 
                 <!-- SqlDataSource for products based on selected category -->
                 <asp:SqlDataSource ID="SqlDataSourceProducts" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString2 %>" 
+                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
                     SelectCommand="SELECT * FROM Products WHERE category_id = @category_id">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="ddlCategories" Name="category_id" PropertyName="SelectedValue" Type="Int32" />
@@ -50,7 +50,7 @@
 
                 <!-- SqlDataSource for categories CRUD -->
                 <asp:SqlDataSource ID="SqlDataSourceCategoriesCRUD" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString2 %>" 
+                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
                     SelectCommand="SELECT * FROM Categories"
                     UpdateCommand="UPDATE Categories SET category_name = @category_name, description = @description WHERE category_id = @category_id"
                     DeleteCommand="DELETE FROM Categories WHERE category_id = @category_id">
@@ -71,7 +71,7 @@
 
                 <!-- SqlDataSource to add new category -->
                 <asp:SqlDataSource ID="SqlDataSourceAddCategory" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString2 %>" 
+                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
                     InsertCommand="INSERT INTO Categories (category_name, description) VALUES (@category_name, @description)" SelectCommand="select * from Categories ">
                     <InsertParameters>
                         <asp:Parameter Name="category_name" Type="String" />
@@ -95,7 +95,7 @@
 
                 <!-- SqlDataSource for products CRUD -->
                 <asp:SqlDataSource ID="SqlDataSourceProductsCRUD" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString2 %>" 
+                    ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
                     SelectCommand="SELECT * FROM Products"
                     UpdateCommand="UPDATE Products SET name = @name, description = @description, price = @price WHERE product_id = @product_id"
                     DeleteCommand="DELETE FROM Products WHERE product_id = @product_id"
