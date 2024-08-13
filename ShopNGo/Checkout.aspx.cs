@@ -22,7 +22,7 @@ namespace ShopNGo
 
             txtShipAddress.Text = isChecked ? txtAddress.Text : string.Empty;
             txtShipCity.Text = isChecked ? txtCity.Text : string.Empty;
-            ddlShipState.SelectedValue = isChecked ? ddlState.SelectedValue : string.Empty;
+            ddlShipProvince.SelectedValue = isChecked ? ddlShipProvince.SelectedValue : string.Empty;
             txtShipZip.Text = isChecked ? txtZip.Text : string.Empty;
         }
 
@@ -38,12 +38,12 @@ namespace ShopNGo
 
                 string address = txtAddress.Text;
                 string city = txtCity.Text;
-                string state = ddlState.SelectedValue;
+                string state = ddlShipProvince.SelectedValue;
                 string zip = txtZip.Text;
 
                 string shipAddress = txtShipAddress.Text;
                 string shipCity = txtShipCity.Text;
-                string shipState = ddlShipState.SelectedValue;
+                string shipState = ddlShipProvince.SelectedValue;
                 string shipZip = txtShipZip.Text;
 
                 // Implement form submission logic here, such as saving data to a database
@@ -67,6 +67,14 @@ namespace ShopNGo
             {
                 args.IsValid = false;
             }
+        }
+
+        protected void cvExpiryDate_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            // Regex to match MM / YY format
+            string pattern = @"^(0[1-9]|1[0-2]) \/ \d{2}$";
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(pattern);
+            args.IsValid = regex.IsMatch(args.Value);
         }
     }
 }

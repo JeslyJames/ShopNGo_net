@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShopNGo {
-    
-    
-    public partial class Checkout {
-        
+namespace ShopNGo
+{
+
+
+    public partial class Checkout
+    {
+
         /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
-        
+
         /// <summary>
         /// txtEmail1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail1;
-        
+
         /// <summary>
         /// rfvEmail1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail1;
-        
+
         /// <summary>
         /// revEmail1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail1;
-        
+
         /// <summary>
         /// txtDOB control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDOB;
-        
+
         /// <summary>
         /// rfvDOB control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDOB;
-        
+
         /// <summary>
         /// cvDOB control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator cvDOB;
-        
+
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-        
+
         /// <summary>
         /// rfvFirstName control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstName;
-        
+
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-        
+
         /// <summary>
         /// rfvLastName control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLastName;
-        
+
         /// <summary>
         /// txtPhone control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
-        
+
         /// <summary>
         /// rfvPhone control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
-        
+
         /// <summary>
         /// revPhone control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
-        
+
         /// <summary>
         /// txtAddress control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
+
         /// <summary>
         /// rfvAddress control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAddress;
-        
+
         /// <summary>
         /// txtCity control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCity;
-        
+
         /// <summary>
         /// rfvCity control.
         /// </summary>
@@ -173,16 +175,16 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
-        
+
         /// <summary>
-        /// ddlState control.
+        /// ddlShipProvince control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
-        
+        protected global::System.Web.UI.WebControls.DropDownList ddlShipProvince;
+
         /// <summary>
         /// rfvState control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState;
-        
+
         /// <summary>
         /// txtZip control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtZip;
-        
+
         /// <summary>
         /// rfvZip control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvZip;
-        
+
         /// <summary>
         /// revZip control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revZip;
-        
+
         /// <summary>
         /// chkSameAsBilling control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkSameAsBilling;
-        
+
         /// <summary>
         /// txtShipAddress control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtShipAddress;
-        
+
         /// <summary>
         /// rfvShipAddress control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShipAddress;
-        
+
         /// <summary>
         /// txtShipCity control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtShipCity;
-        
+
         /// <summary>
         /// rfvShipCity control.
         /// </summary>
@@ -263,7 +265,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShipCity;
-        
+
         /// <summary>
         /// ddlShipState control.
         /// </summary>
@@ -272,7 +274,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlShipState;
-        
+
         /// <summary>
         /// rfvShipState control.
         /// </summary>
@@ -281,7 +283,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShipState;
-        
+
         /// <summary>
         /// txtShipZip control.
         /// </summary>
@@ -290,7 +292,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtShipZip;
-        
+
         /// <summary>
         /// rfvShipZip control.
         /// </summary>
@@ -299,7 +301,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShipZip;
-        
+
         /// <summary>
         /// revShipZip control.
         /// </summary>
@@ -308,34 +310,34 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revShipZip;
-        
+
         /// <summary>
-        /// txtCardNumber control.
+        /// txtCreditCard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCardNumber;
-        
+        protected global::System.Web.UI.WebControls.TextBox txtCreditCard;
+
         /// <summary>
-        /// rfvCardNumber control.
+        /// rfvCreditCard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCardNumber;
-        
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditCard;
+
         /// <summary>
-        /// revCardNumber control.
+        /// revCreditCard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCardNumber;
-        
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCreditCard;
+
         /// <summary>
         /// txtExpiryDate control.
         /// </summary>
@@ -344,7 +346,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtExpiryDate;
-        
+
         /// <summary>
         /// rfvExpiryDate control.
         /// </summary>
@@ -353,7 +355,16 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvExpiryDate;
-        
+
+        /// <summary>
+        /// cvExpiryDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvExpiryDate;
+
         /// <summary>
         /// txtCVV control.
         /// </summary>
@@ -362,7 +373,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCVV;
-        
+
         /// <summary>
         /// rfvCVV control.
         /// </summary>
@@ -371,7 +382,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCVV;
-        
+
         /// <summary>
         /// revCVV control.
         /// </summary>
@@ -380,7 +391,7 @@ namespace ShopNGo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revCVV;
-        
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>
