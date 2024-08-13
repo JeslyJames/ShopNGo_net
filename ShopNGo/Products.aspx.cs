@@ -34,7 +34,7 @@ namespace ShopNGo
                 string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ShopNGoConnectionString"].ConnectionString;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT name, sale_price FROM Products WHERE product_id = @ProductId";
+                    string query = "SELECT name, sale_price,original_price FROM Products WHERE product_id = @ProductId";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@ProductId", productId);
 
@@ -43,7 +43,7 @@ namespace ShopNGo
                     if (reader.Read())
                     {
                         productName = reader["name"].ToString();
-                        productPrice = reader["sale_price"] != DBNull.Value ? Convert.ToDecimal(reader["sale_price"]) : 0;
+                        productPrice = reader["sale_price"] != DBNull.Value ? Convert.ToDecimal(reader["sale_price"]) : Convert.ToDecimal(reader["original_price"]);
                     }
                     reader.Close();
                 }

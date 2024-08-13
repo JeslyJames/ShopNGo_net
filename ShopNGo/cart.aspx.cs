@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
+using ShopNGo.Models;  // Ensure this using directive is added
 
 namespace ShopNGo
 {
@@ -27,6 +28,7 @@ namespace ShopNGo
             {
                 BindCart();
                 UpdateTotalPrice();
+                CheckCartEmpty();
             }
         }
 
@@ -40,6 +42,20 @@ namespace ShopNGo
         {
             decimal totalPrice = CartItems.Sum(item => item.TotalPrice);
             lblTotalPrice.Text = $"Total Price: {totalPrice:C}";
+        }
+
+        private void CheckCartEmpty()
+        {
+            if (CartItems.Count == 0)
+            {
+                lblMessage.Text = "Your cart is empty.";
+                btnCheckOut.Enabled = false; // Disable the checkout button
+            }
+            else
+            {
+                lblMessage.Text = "";
+                btnCheckOut.Enabled = true; // Enable the checkout button
+            }
         }
 
         protected void RepeaterCart_ItemCommand(object source, RepeaterCommandEventArgs e)
@@ -59,6 +75,7 @@ namespace ShopNGo
                     }
                 }
                 BindCart();
+                CheckCartEmpty();
             }
             else if (e.CommandName == "RemoveFromCart")
             {
@@ -71,6 +88,7 @@ namespace ShopNGo
                     UpdateTotalPrice();
                 }
                 BindCart();
+                CheckCartEmpty();
             }
         }
 
@@ -79,6 +97,20 @@ namespace ShopNGo
             Session["Cart"] = new List<CartItem>();
             BindCart();
             UpdateTotalPrice();
+            CheckCartEmpty();
+        }
+
+        protected void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            if (CartItems.Count == 0)
+            {
+                lblMessage.Text = "Your cart is empty. You cannot proceed to checkout.";
+            }
+            else
+            {
+                // Redirect to checkout page
+                Response.Redirect("~/Checkout.aspx");
+            }
         }
     }
 }

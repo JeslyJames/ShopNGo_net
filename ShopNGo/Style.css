@@ -55,9 +55,12 @@
 
 /* Styling for original price */
 .original-price {
-    text-decoration: line-through;
     color: #999;
     margin-right: 10px;
+}
+
+.strike-through {
+    text-decoration: line-through !important;
 }
 
 /* Styling for sale price */

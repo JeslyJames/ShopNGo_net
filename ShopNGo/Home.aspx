@@ -3,14 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Welcome to ShopNGo</h2>
     <p>Discover our range of fresh products and stay updated with the latest news.</p>
-    
+
     <!-- Categories Section -->
     <h3>Categories</h3>
     <div class="categories">
         <asp:Repeater ID="RepeaterCategories" runat="server" DataSourceID="SqlDataSourceCategories">
             <ItemTemplate>
                 <div class="category-card product-card">
-                    <asp:HyperLink ID="hlCategory" runat="server" NavigateUrl='<%# "~/Products.aspx?category=" + Eval("category_name") %>'>
+                    <asp:HyperLink ID="hlCategory" runat="server" NavigateUrl='<%# "~/Products.aspx?category=" + Eval("category_id") %>'>
                         <img src='<%# ResolveUrl(Eval("image_url").ToString()) %>' alt='<%# Eval("category_name") %>' class="category-image product-image" />
                     </asp:HyperLink>
                     <h4 class="category-name product-name"><%# Eval("category_name") %></h4>
@@ -18,17 +18,17 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
-    
-    <asp:SqlDataSource ID="SqlDataSourceCategories" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
-        SelectCommand="SELECT DISTINCT category_name, image_url FROM Categories 
+
+    <asp:SqlDataSource ID="SqlDataSourceCategories" runat="server"
+        ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>"
+        SelectCommand="SELECT category_id, category_name, image_url FROM Categories 
                        WHERE category_name NOT IN ('Chicken', 'Mutton', 'Fish', 'Steak')">
     </asp:SqlDataSource>
 
     <!-- Deals Section -->
     <h3>Fresh Deals</h3>
     <div class="deals">
-        <asp:Repeater ID="RepeaterDeals" runat="server" DataSourceID="SqlDataSourceDeals">
+        <asp:Repeater ID="RepeaterDeals" runat="server" DataSourceID="SqlDataSourceDeals" OnItemCommand="RepeaterDeals_ItemCommand">
             <ItemTemplate>
                 <div class="deal-card product-card">
                     <div class="discount-label">
@@ -48,9 +48,9 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
-    
-    <asp:SqlDataSource ID="SqlDataSourceDeals" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
+
+    <asp:SqlDataSource ID="SqlDataSourceDeals" runat="server"
+        ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>"
         SelectCommand="SELECT product_id, name, description, original_price, sale_price, image_url, 
                        CAST((original_price - sale_price) / original_price * 100 AS INT) AS discount 
                        FROM Products WHERE sale_price IS NOT NULL">
@@ -69,9 +69,9 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
-    
-    <asp:SqlDataSource ID="SqlDataSourceNews" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>" 
+
+    <asp:SqlDataSource ID="SqlDataSourceNews" runat="server"
+        ConnectionString="<%$ ConnectionStrings:ShopNGoConnectionString %>"
         SelectCommand="SELECT title, content, date FROM News ORDER BY date DESC">
     </asp:SqlDataSource>
 </asp:Content>
